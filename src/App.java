@@ -22,6 +22,7 @@ public class App {
 			String name = input.nextLine();
 
 			System.out.println("\nHello " + name + "! Choose the Following numbers to Continue\n");
+			String[] choices = {"Stone", "Scissors", "Paper"};
 
 			printing("Choose 1 for Stone!");
 			printing("Choose 2 for Scissors!");
@@ -31,8 +32,8 @@ public class App {
 			int number = input.nextInt();
 			int computer = (int) (Math.random() * 3) + 1;
 			if (number >= 1 && number <= 3) {
-				printing("Computer chooses " + computer);
-				printing(name + " choosed " + number);
+			    printing("Computer chooses " + choices[computer - 1]);
+                printing(name + " chose " + choices[number - 1]);
 			}
 
 			if (number >= 1 && number <= 3) {
